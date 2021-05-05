@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Users</h1>
+	<p>This page contains user editing capabilities</p>
+	<table id="userlist">
+		<tr>
+			<th>name</th>
+			<th>password</th>
+		</tr>
+	</table>
+	<button type="button" onclick="requestUserList()">Refresh</button>
+	<p>
+		<button type="button" onclick="createNewUser()">Add User</button>
+	</p>
+
+	<h2>Edit user</h2>
+	<table>
+	<tr><td>Name: </td><td><input type="text" id="uname" name="uname"></td></tr>
+	<tr><td>Password: </td><td><input type="text" id="pw" name="pw"></td></tr>
+	</table>
+	<p>
+		<button type="button" onclick="updateUser()">Update</button>
+	</p>
+	
+	<script src="users.js"></script>
+</body>
+</html>
