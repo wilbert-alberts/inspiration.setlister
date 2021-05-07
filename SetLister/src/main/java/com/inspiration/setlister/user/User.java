@@ -1,11 +1,25 @@
 package com.inspiration.setlister.user;
 
-public class User implements IUser {
-	private Long id;
+import java.util.Objects;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+	private @Id @GeneratedValue Long id;
 	private String username;
 	private String password;
 
-	@Override
+	User() {
+	}
+
+	User(String un, String pw) {
+		username = un;
+		password = pw;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -14,29 +28,34 @@ public class User implements IUser {
 		this.id = id;
 	}
 
-	public User(long l, String un, String pw) {
-		id = l;
-		username = un;
-		password = pw;
-	}
-
-	@Override
 	public String getUsername() {
 		return username;
 	}
 
-	@Override
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
-	@Override
 	public String getPassword() {
 		return password;
 	}
 
-	@Override
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.id, this.username, this.password);
+	}
+
+	public boolean compare(Object o) {
+		if (this == o)
+			return true;
+		if (!(o instanceof User))
+			return false;
+		User other = (User) o;
+		return Objects.equals(this.id, other.id) && Objects.equals(this.username, other.username)
+				&& Objects.equals(this.password, other.password);
 	}
 }
