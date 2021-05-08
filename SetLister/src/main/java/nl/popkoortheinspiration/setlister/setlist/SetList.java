@@ -15,7 +15,7 @@ public class SetList extends Entity {
 	List<SetListItem> items;
 
 	public SetList() {
-		this("<null>", "<null>", "<null>", Date.fromJavaUtilDate(new java.util.Date()));
+		this("_null_", "_null_", "_null_", Date.fromJavaUtilDate(new java.util.Date()));
 	}
 
 	public SetList(String t, String l, String a, Date d) {

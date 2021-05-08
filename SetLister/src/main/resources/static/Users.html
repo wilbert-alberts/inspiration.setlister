@@ -2,31 +2,45 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" href="setlister.css">
+<title>User Editing</title>
 </head>
 <body>
-	<h1>Users</h1>
-	<p>This page contains user editing capabilities</p>
-	<table id="userlist">
-		<tr>
-			<th>name</th>
-			<th>password</th>
-		</tr>
-	</table>
-	<button type="button" onclick="requestUserList()">Refresh</button>
-	<p>
-		<button type="button" onclick="createNewUser()">Add User</button>
-	</p>
+	<div class="header">
+		<h1>Users</h1>
+		<p>This page contains user editing capabilities</p>
+	</div>
 
-	<h2>Edit user</h2>
-	<table>
-	<tr><td>Name: </td><td><input type="text" id="uname" name="uname"></td></tr>
-	<tr><td>Password: </td><td><input type="text" id="pw" name="pw"></td></tr>
-	</table>
-	<p>
-		<button type="button" onclick="updateUser()">Update</button>
-	</p>
-	
+	<div class="row">
+		<div class="leftcolumn">
+			<h2>All users</h2>
+			<div id="userlist">
+				<ul>
+					<li>Wilbert</li>
+					<li>Rob</li>
+				</ul>
+			</div>
+			<p>
+				<button id="newuserbutton" >New</button>
+			</p>
+		</div>
+		<div class="center">
+			<div id="edituser">
+				<h2>One User</h2>
+				<p>Here you can edit the user</p>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div id="userlist">
+				<h2>Here are other options</h2>
+				<ul>
+					<li>Login</li>
+					<li>Logout</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 	<script src="users.js"></script>
 </body>
 </html>

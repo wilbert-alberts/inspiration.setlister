@@ -24,9 +24,9 @@ public class UserController {
 	}
 
 	@PostMapping("/users")
-	User create(@RequestBody User newUser) {
+	User create() {
 		System.err.println("> UserController::create()");
-		return repository.create(newUser);
+		return repository.create();
 	}
 
 	@GetMapping("/users")

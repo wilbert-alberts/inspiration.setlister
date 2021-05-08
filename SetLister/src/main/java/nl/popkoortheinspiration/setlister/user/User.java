@@ -12,7 +12,7 @@ public class User extends Entity {
 	Role role;
 
 	public User() {
-		this("<null>", null, Role.PUBLIC);
+		this("_null_", null, Role.PUBLIC);
 	}
 
 	public User(String n, String p) {

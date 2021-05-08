@@ -11,7 +11,7 @@ public class Song extends Entity {
 	int durationInSeconds;
 	
 	public Song() {
-		this("<null>");
+		this("_null_");
 	}
 
 	public Song(String title) {
