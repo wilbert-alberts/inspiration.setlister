@@ -59,4 +59,8 @@ public class User extends Entity {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+
+	public String toString() {
+		return "{ " + getUsername() + ", " + getPassword() + ", " + getRole().toString() + " }";
+	}
 }

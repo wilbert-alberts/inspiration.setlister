@@ -38,21 +38,23 @@ public class UserController {
 
 	@GetMapping("/users/{id}")
 	User read(@PathVariable String id) {
-		System.err.println("> UserController::read()");
+		System.err.println("> UserController::read("+id+")");
 		return repository.read(id);
 	}
 
 	@PutMapping("/users/{id}")
 	void update(@RequestBody User newUser, @PathVariable String id) {
-		System.err.println("> UserController::update()");
+		System.err.println("> UserController::update("+id+", user: "+newUser+")");
 		User s = repository.read(id);
-		if (s != null)
+		if (s != null) {
 			s.set(newUser);
+			repository.update(s);
+		}
 	}
 
 	@DeleteMapping("/users/{id}")
 	void delete(@PathVariable String id) {
-		System.err.println("> UserController::delete()");
+		System.err.println("> UserController::delete("+id+")");
 		repository.delete(id);
 	}
 }

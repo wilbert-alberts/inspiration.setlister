@@ -21,13 +21,32 @@
 				</ul>
 			</div>
 			<p>
-				<button id="newuserbutton" >New</button>
+				<button id="newuserbutton">New</button>
 			</p>
 		</div>
 		<div class="center">
 			<div id="edituser">
-				<h2>One User</h2>
+				<h2>Edit User</h2>
 				<p>Here you can edit the user</p>
+				<table>
+					<tr>
+						<td>Name:</td>
+						<td><input id="edituser-username" type="text"></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input id="edituser-password" type="text"></td>
+					</tr>
+					<tr>
+						<td>Role:</td>
+						<td><select name="cars" id="edituser-role">
+								<option value="PUBLIC">Public</option>
+								<option value="EDITOR">Editor</option>
+								<option value="ADMIN">Admin</option>
+						</select></td>
+					</tr>
+				</table>
+				<button id="edituser-update" onclick="">Update</button>
 			</div>
 		</div>
 		<div class="rightcolumn">
