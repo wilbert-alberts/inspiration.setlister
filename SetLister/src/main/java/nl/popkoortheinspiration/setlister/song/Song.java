@@ -33,6 +33,7 @@ public class Song extends Entity {
 	public void set(Song other) {
 		setTitle(other.title);
 		setDurationInSeconds(other.getDurationInSeconds());
+		setScoreURL(other.scoreURL);
 		setTracks(other.getTracks());
 	}
 	

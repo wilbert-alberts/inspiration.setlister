@@ -65,8 +65,10 @@ public class SongController {
 	void update(@RequestBody Song newSong, @PathVariable String id) {
 		System.err.println("> SongController::update()");
 		Song s = repository.read(id);
-		if (s != null)
+		if (s != null) {
 			s.set(newSong);
+			repository.update(s);
+		}
 	}
 
 	@DeleteMapping("/songs/{id}")
