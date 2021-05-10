@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="setlister.css">
+<title>User Editing</title>
+</head>
+<body>
+	<div class="header">
+		<h1>Songs</h1>
+		<p>This page contains Song editing capabilities</p>
+	</div>
+
+	<div class="row">
+		<div class="leftcolumn">
+			<h2>All Songs</h2>
+			<div id="songlist">
+				<ul>
+					<li>Song 1</li>
+					<li>Song 2</li>
+				</ul>
+			</div>
+			<p>
+				<button id="newsongbutton">New</button>
+			</p>
+		</div>
+		<div class="center">
+			<div id="editsong">
+				<h2>Edit Song</h2>
+				<p>Here you can edit the Song</p>
+				<table>
+					<tr>
+						<td>Title:</td>
+						<td><input id="editsong-title" type="text"></td>
+					</tr>
+					<tr>
+						<td>Duration:</td>
+						<td><input id="editsong-duration" type="text"></td>
+					</tr>
+					<tr>
+						<td>Score:</td>
+						<td><input id="editsong-score" type="text"></td>
+					</tr>
+					<tr>
+						<td>Tracks:</td>
+					</tr>
+				</table>
+				<p>Here you can edit the Tracks</p>
+				<div id="tracklist">
+				<table>
+					<tr>
+						<td><select name="cars" id="track-1-kind">
+								<option value="ACCOMPANIMENT">Begeleiding</option>
+								<option value="REHEARSE_ALL">Oefenmateriaal - allen</option>
+								<option value="REHEARSE_SOPRANO">Oefenmateriaal -
+									sopraan</option>
+								<option value="REHEARSE_ALTO">Oefenmateriaal - alt</option>
+								<option value="REHEARSE_TENOR">Oefenmateriaal - tenor</option>
+								<option value="REHEARSE_UNSPECIFIED">Overig</option>
+						</select></td>
+						<td><input id="track-1-url" type="text"></td>
+						<td><button id="track-1-deletebutton">delete</button></td>
+					</tr>
+					<tr>
+						<td><select name="cars" id="track-2-kind">
+								<option value="ACCOMPANIMENT">Begeleiding</option>
+								<option value="REHEARSE_ALL">Oefenmateriaal - allen</option>
+								<option value="REHEARSE_SOPRANO">Oefenmateriaal -
+									sopraan</option>
+								<option value="REHEARSE_ALTO">Oefenmateriaal - alt</option>
+								<option value="REHEARSE_TENOR">Oefenmateriaal - tenor</option>
+								<option value="REHEARSE_UNSPECIFIED">Overig</option>
+						</select></td>
+						<td><input id="track-2-url" type="text"></td>
+						<td><button id="track-2-deletebutton">delete</button></td>
+					</tr>
+					<tr>
+						<td><select name="cars" id="track-3-kind">
+								<option value="ACCOMPANIMENT">Begeleiding</option>
+								<option value="REHEARSE_ALL">Oefenmateriaal - allen</option>
+								<option value="REHEARSE_SOPRANO">Oefenmateriaal -
+									sopraan</option>
+								<option value="REHEARSE_ALTO">Oefenmateriaal - alt</option>
+								<option value="REHEARSE_TENOR">Oefenmateriaal - tenor</option>
+								<option value="REHEARSE_UNSPECIFIED">Overig</option>
+						</select></td>
+						<td><input id="track-3-url" type="text"></td>
+						<td><button id="track-3-deletebutton">delete</button></td>
+					</tr>
+				</table>
+				</div>
+				<button id="editsong-addtrackbutton" onclick="">Add track</button>
+				<p>
+				<button id="editsong-updatebutton" onclick="">Update song</button>
+				</p>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div id="loginlist">
+				<h2>Here are other options</h2>
+				<ul>
+					<li>Login</li>
+					<li>Logout</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="songs.js"></script>
+</body>
+</html>

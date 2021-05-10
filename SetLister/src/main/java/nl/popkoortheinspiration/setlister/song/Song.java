@@ -9,6 +9,7 @@ public class Song extends Entity {
 	String title;
 	List<Track> tracks;
 	int durationInSeconds;
+	private String scoreURL;
 	
 	public Song() {
 		this("_null_");
@@ -59,6 +60,14 @@ public class Song extends Entity {
 
 	public void setDurationInSeconds(int durationInSeconds) {
 		this.durationInSeconds = durationInSeconds;
+	}
+
+	public String getScoreURL() {
+		return scoreURL;
+	}
+
+	public void setScoreURL(String scoreURL) {
+		this.scoreURL = scoreURL;
 	}
 	
 }
