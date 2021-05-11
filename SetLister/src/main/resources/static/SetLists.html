@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="setlister.css">
+<title>SetList Editing</title>
+</head>
+<body>
+	<div class="header">
+		<h1>SetLists</h1>
+		<p>This page contains SetList editing capabilities</p>
+	</div>
+
+	<div class="row">
+		<div class="leftcolumn">
+			<h2>All SetLists</h2>
+			<div id="setlistlist">
+				<ul>
+					<li>SetList 1</li>
+					<li>SetList 2</li>
+				</ul>
+			</div>
+			<p>
+				<button id="newsetlistbutton">New</button>
+			</p>
+		</div>
+		<div class="center">
+			<div id="editsetlist">
+				<h2>Edit SetList</h2>
+				<p>Here you can edit the SetList</p>
+				<table>
+					<tr>
+						<td></td>
+						<td>
+							<table>
+								<tr>
+									<td>Date:</td>
+									<td><input type="text"></td>
+								</tr>
+								<tr>
+									<td>Title:</td>
+									<td><input type="text"></td>
+								</tr>
+								<tr>
+									<td>Location:</td>
+									<td><input type="text"></td>
+								</tr>
+								<tr>
+									<td>Author:</td>
+									<td><select>
+											<option value="Angelique">Angelique</option>
+											<option value="Wilbert">Wilbert</option>
+											<option value="Marielle">Marielle</option>
+									</select></td>
+								</tr>
+								<tr>
+									<td>Length:</td>
+									<td><input type="text"></td>
+								</tr>
+							</table>
+
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align: top;"><h3>Songs</h3>
+							<table>
+								<tr>
+									<th>Title</th>
+									<th>Length</th>
+								</tr>
+								<tr>
+									<td>Let your love flow</td>
+									<td>3:20</td>
+									<td><button>add</button></td>
+								</tr>
+								<tr>
+									<td>We are the world</td>
+									<td>3:10</td>
+									<td><button>add</button></td>
+								</tr>
+								<tr>
+									<td>Break</td>
+									<td><input type="text"></td>
+									<td><button>add</button></td>
+								</tr>
+							</table></td>
+						<td style="vertical-align: top;"><h3>SetList</h3>
+							<table>
+								<tr>
+									<th></th>
+									<th>Title</th>
+									<th>Length</th>
+								</tr>
+								<tr>
+									<td><button>remove</button></td>
+									<td>We are the world</td>
+									<td>3:10</td>
+									<td><button>up</button></td>
+									<td><button>down</button></td>
+								</tr>
+							</table></td>
+					</tr>
+				</table>
+				<button>Update</button>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div id="loginlist">
+				<h2>Here are other options</h2>
+				<ul>
+					<li>Login</li>
+					<li>Logout</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="setlists.js"></script>
+</body>
+</html>
