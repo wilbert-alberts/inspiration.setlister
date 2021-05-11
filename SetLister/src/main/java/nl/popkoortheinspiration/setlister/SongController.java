@@ -1,8 +1,6 @@
 package nl.popkoortheinspiration.setlister;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import nl.popkoortheinspiration.setlister.song.Song;
 import nl.popkoortheinspiration.setlister.song.SongRepository;
-import nl.popkoortheinspiration.setlister.song.Track;
+import nl.popkoortheinspiration.setlister.song.SongTest;
 
 @RestController
 public class SongController {
@@ -26,19 +24,11 @@ public class SongController {
 		this.repository = repository;
 	}
 
-	@GetMapping("/songtest")
+	@GetMapping("/songs/test")
 	void songTest() {
 		System.err.println("> SongController::songTest()");
-		Song s = new Song("TestSong");
-		Track t1 = new Track("http://t1.mp3", Track.Kind.REHEARSE_ALL);
-		Track t2 = new Track("http://t2.mp3", Track.Kind.ACCOMPANIMENT);
-		List<Track> ts = new ArrayList<Track>();
-		ts.add(t1);
-		ts.add(t2);
-		s.setTracks(ts);
-		s.setDurationInSeconds(260);
-		s.setScoreURL("http://myscoreurl.html");
-		repository.create(s);
+		SongTest tst = new SongTest(repository);
+		tst.execute();
 	}
 
 	
