@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import nl.popkoortheinspiration.setlister.user.User;
 import nl.popkoortheinspiration.setlister.user.UserRepository;
+import nl.popkoortheinspiration.setlister.user.UserTest;
 
 @RestController
 public class UserController {
@@ -21,6 +22,13 @@ public class UserController {
 	public UserController(UserRepository repository) {
 		System.err.println("> UserController::UserController()");
 		this.repository = repository;
+	}
+
+	@GetMapping("/users/test")
+	void userTest() {
+		System.err.println("> UserController::userTest()");
+		UserTest tst = new UserTest(repository);
+		tst.execute();
 	}
 
 	@PostMapping("/users")
